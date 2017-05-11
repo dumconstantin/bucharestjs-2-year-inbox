@@ -6,7 +6,7 @@ config:
       component: 'inbox'
   app:
     recentPeriod: 3000
-    minimumUsers: 11
+    minimumUsers: 40
 
 firebase:
   config:

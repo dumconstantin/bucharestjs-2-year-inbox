@@ -22,7 +22,7 @@ module.exports = {
       | intra aici!
 
     h1.link
-      span bitly.com
+      span bit.ly/bjs2yrs
     p.userRemaining {{ userCount }} / {{ minimumUsers }} participanti
 
 
