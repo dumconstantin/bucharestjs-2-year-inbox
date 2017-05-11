@@ -1,0 +1,33 @@
+
+config:
+  ui:
+    mount:
+      el: '#app'
+      component: 'inbox'
+  app:
+    recentPeriod: 3000
+
+firebase:
+  config:
+    apiKey: "AIzaSyC_GtmDRKtqkd8UseF9jYTU4T0ikoTu79I"
+    authDomain: "bucharestjs-5cbd6.firebaseapp.com"
+    databaseURL: "https://bucharestjs-5cbd6.firebaseio.com"
+    projectId: "bucharestjs-5cbd6"
+    storageBucket: "bucharestjs-5cbd6.appspot.com"
+    messagingSenderId: "741543736848"
+  sync:
+    users:
+      path: /data/users
+      namespace: 'bar'
+    messages:
+      path: /data/messages
+      namespace: 'bar'
+
+messages:
+  data:
+    hurray: Uraaa!
+    baloon: Awwww, ce dragut!
+    camera: Poza time!
+    present: Multumim pentru cadou!
+    champagne: Noroc!
+    postcard: Ce felicitare frumoasa!
