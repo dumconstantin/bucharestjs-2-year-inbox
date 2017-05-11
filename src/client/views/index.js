@@ -9,13 +9,13 @@ module.exports = {
     messagesCount: '/messages/count',
     recentMessages: '/messages/recent',
     recentUsers: '/users/recent',
-    showGreeting: '/app/showGreeting',
+    showGreeting: '/app/showGreeting/value',
     usersScale: '/app/usersScale'
   },
   template: pug `
 .inbox
 
-  .greeting(v-if="showGreeting")
+  .greeting(v-if="showGreeting !== false")
     h1
       | Pssst,
       br
@@ -24,6 +24,9 @@ module.exports = {
     h1.link
       span bitly.com
     p.userRemaining {{ userCount }} / {{ minimumUsers }} participanti
+
+
+  .balloons(v-if="showGreeting === false")
 
   h1 Happy Birthday BucharestJS!
   .logo-bg(src="images/logo.jpg")

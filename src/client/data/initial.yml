@@ -6,7 +6,7 @@ config:
       component: 'inbox'
   app:
     recentPeriod: 3000
-    minimumUsers: 20
+    minimumUsers: 11
 
 firebase:
   config:
@@ -17,15 +17,12 @@ firebase:
     storageBucket: "bucharestjs-5cbd6.appspot.com"
     messagingSenderId: "741543736848"
   sync:
+    showGreeting:
+      path: /app/showGreeting
     users:
       path: /data/users
-      namespace: 'bar'
     messages:
       path: /data/messages
-      namespace: 'bar'
-
-app:
-  showGreeting: true
 
 messages:
   data:

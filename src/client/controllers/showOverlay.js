@@ -1,5 +1,5 @@
 
-import { stream } from 'jsonmvc'
+import { stream, observer } from 'jsonmvc'
 
 module.exports = {
   args: {
@@ -8,10 +8,10 @@ module.exports = {
   },
   fn: stream
     .filter(args => args.current >= args.minimum)
-    .map(args => ({
-      op: 'add',
-      path: '/app/showGreeting',
-      value: false
+    .chain((args, lib) => observer(o => {
+      firebase.database().ref('showGreeting').set({
+        timestamp: lib.get('/time/ms'),
+        value: false
+      })
     }))
-
 }
