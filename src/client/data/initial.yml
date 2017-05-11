@@ -6,6 +6,7 @@ config:
       component: 'inbox'
   app:
     recentPeriod: 3000
+    minimumUsers: 20
 
 firebase:
   config:
@@ -22,6 +23,9 @@ firebase:
     messages:
       path: /data/messages
       namespace: 'bar'
+
+app:
+  showGreeting: true
 
 messages:
   data:

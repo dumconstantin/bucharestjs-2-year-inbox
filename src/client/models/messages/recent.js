@@ -21,10 +21,6 @@ module.exports = {
       return acc
     }, [])
 
-    if (messages.length !== 0) {
-      console.log(messages)
-    }
-
     return messages
 
   }
